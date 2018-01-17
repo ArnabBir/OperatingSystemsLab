@@ -4,7 +4,7 @@ int bork()
 {
  int q,r;
  q=fork();
- if(q==0)return(getppid());
+ if(q==0)return(getppid());//B return A
  else
  {
    r=fork();
