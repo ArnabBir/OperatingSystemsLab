@@ -4,8 +4,13 @@ w=9
 a=5
 b=1
 a=a+b
-scanf(a)
-a=a+a
 print(a)
+w=4
+nopscanf(g)
+a{t}=g
+nop
+nop
+nop
+nop
 w=9
 end
