@@ -1,1 +1,0 @@
-a=7 a=a+z atom print(a) print(a) print(a) nonatom print(a) print(a) end
