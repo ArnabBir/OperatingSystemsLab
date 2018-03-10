@@ -6,7 +6,7 @@ class g_dash implements Runnable{
 		for(i = 1; i <= k; ++i){
 			System.out.println(i);
 			try{
-				Thread.sleep(500);
+				Thread.sleep(1000);
 			}
 			catch(Exception e){}
 		}

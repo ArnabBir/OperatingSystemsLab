@@ -1,0 +1,47 @@
+import java.util.Scanner;
+
+class PrintInt implements Runnable{
+	
+	int n;
+	
+	public void run(){
+		Scanner sc = new Scanner(System.in);
+		n = sc.nextInt();
+	}
+	
+	public int getn(){
+		return n;
+	}
+}
+
+class P5{
+	
+	public static void main(String [] args){
+		
+		PrintInt pi = new PrintInt();
+		Thread t = new Thread(pi);
+		
+		int counter = 0;
+		
+		t.start();
+		
+		while(t.isAlive()){
+			System.out.println(++counter);
+			try{
+				Thread.sleep(500);
+			}
+			catch(Exception e){}
+		}
+		
+		counter = pi.getn(); 
+		
+		while(true){
+			System.out.println(++counter);
+			try{
+				Thread.sleep(500);
+			}
+			catch(Exception e){}
+		}
+		
+	}
+}

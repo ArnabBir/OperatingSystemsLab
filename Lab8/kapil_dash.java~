@@ -4,9 +4,9 @@ class kapil_dash{
 
 	public static void main(String [] k) throws Exception{
 
-		g_dash x = new g_dash();
+		g x = new g();
 		Thread t = new Thread(x);
-		g_dash y = new g_dash();
+		g y = new g();
 		Thread u = new Thread(y);
 
 		x.k = 15;
