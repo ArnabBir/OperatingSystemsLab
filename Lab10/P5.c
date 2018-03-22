@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <signal.h>
+
+int time = 0;
+
+void k(){
+	printf("%d\n", time);
+	time = 0;
+}
+
+void t(){
+
+	while(1){
+		sleep(1);
+		++time;
+	}
+}
+
+main(){
+	signal(SIGINT, k);
+	t();
+}
