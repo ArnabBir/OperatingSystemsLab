@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <fcntl.h>
+
+main(){
+	int fd;
+	int  i, end, count = 0;
+	char c;
+
+	fd = open("prob7", O_RDONLY);
+	end = lseek(fd, 0, SEEK_END);
+	lseek(fd, end-1, SEEK_SET);
+
+	do{
+
+		printf("%c", c);
+		lseek(fd, -2, SEEK_CUR);
+	}while(end--);
+
+	printf("%d\n", count);
+}
